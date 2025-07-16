@@ -5,9 +5,11 @@ function App() {
   return (
     <main className="min-h-screen bg-white text-gray-900 p-4 md:p-8 space-y-12">
       <header className="text-center border-b pb-6">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Idaho JDM Motors</h1>
-        <p className="text-lg md:text-xl text-gray-600 mt-2">Imported Japanese Vehicles | Boise, ID</p>
-      </header>
+  <img src="/logo.png" alt="Idaho JDM Motors logo" className="mx-auto h-28 mb-4" />
+  <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Idaho JDM Motors</h1>
+  <p className="text-lg md:text-xl text-gray-600 mt-2">Imported Japanese Vehicles | Boise, ID</p>
+</header>
+
 
       <section className="space-y-6">
         <h2 className="text-2xl md:text-3xl font-semibold border-b pb-2">Featured Inventory</h2>
