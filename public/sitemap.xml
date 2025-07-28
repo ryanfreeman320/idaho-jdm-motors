@@ -1,6 +1,7 @@
-<!-- public/sitemap.xml -->
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
   <url>
     <loc>https://nipponmotors.org/</loc>
     <priority>1.0</priority>
@@ -17,8 +18,7 @@
     <loc>https://nipponmotors.org/contact</loc>
     <priority>0.7</priority>
   </url>
-  <!-- Add static vehicle detail pages manually -->
-  <url>
+</urlset>
     <loc>https://nipponmotors.org/inventory/delica-97</loc>
   </url>
   <url>
