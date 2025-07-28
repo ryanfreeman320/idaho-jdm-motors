@@ -4,7 +4,7 @@ export default function About() {
       <h1 className="text-2xl font-bold mb-4">About Nippon Motors</h1>
       <p>
         Nippon Motors imports high-quality Japanese vehicles — specializing in Delicas, Hiaces,
-        and other JDM classics. 
+        and other JDM classics in Boise, Idaho.  Vehicle viewing is by appointment only.
       </p>
     </div>
   );
