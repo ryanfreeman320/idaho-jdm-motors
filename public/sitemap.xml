@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://nipponmotors.org/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nipponmotors.org/inventory</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nipponmotors.org/about</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nipponmotors.org/contact</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nipponmotors.org/inventory/delica-97</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nipponmotors.org/inventory/hiace-96</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nipponmotors.org/inventory/grand-hiace-99</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nipponmotors.org/inventory/evo-vi-99</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
