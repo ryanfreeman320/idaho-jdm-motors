@@ -1,5 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import vehicleData from './vehicleData';
+import { Helmet } from 'react-helmet-async';
+
 
 export default function VehicleDetail() {
   const { id } = useParams();
@@ -16,6 +18,22 @@ export default function VehicleDetail() {
 
   return (
     <main className="p-8 max-w-4xl mx-auto">
+      <Helmet>
+        <title>{vehicle.title} | Nippon Motors</title>
+        <meta
+          name="description"
+          content={`Explore our ${vehicle.title} — ${vehicle.specs}, ${vehicle.mileage}, ${vehicle.price}. Imported and available from Nippon Motors.`}
+        />
+        <meta
+          name="keywords"
+          content="Toyota Grand Hiace, Grand Hiace, Toyota Grand Hiace for sale, Grand Hiace for sale, VCH16W, KCH16W, VCH16, KCH16"
+        />
+        <link
+          rel="canonical"
+          href={`https://nipponmotors.org/inventory/${vehicle.id}`}
+        />
+      </Helmet>
+
       <Link to="/inventory" className="text-blue-500 underline mb-4 inline-block">← Back to Inventory</Link>
       <div className="bg-white shadow rounded-lg overflow-hidden">
         <img src={vehicle.image} alt={vehicle.title} className="w-full h-64 object-cover" />
@@ -34,4 +52,5 @@ export default function VehicleDetail() {
       </div>
     </main>
   );
+
 }
