@@ -2,7 +2,6 @@ import { useParams, Link } from 'react-router-dom';
 import vehicleData from './vehicleData';
 import { Helmet } from 'react-helmet-async';
 
-
 export default function VehicleDetail() {
   const { id } = useParams();
   const vehicle = vehicleData.find((v) => v.id === id);
@@ -16,22 +15,31 @@ export default function VehicleDetail() {
     );
   }
 
+  // Create a concise model name (e.g., remove year and make)
+  const modelName = vehicle.title
+    .replace(`${vehicle.year}`, '')
+    .replace(`${vehicle.make}`, '')
+    .trim();
+
+  const pageTitle = `Used ${vehicle.year} ${vehicle.make} ${modelName} for Sale | Nippon Motors`;
+  const metaDescription = `Buy a ${vehicle.year} ${vehicle.make} ${modelName} with ${vehicle.mileage}, ${vehicle.specs}, and a price of ${vehicle.price}. Available now at Nippon Motors in Boise, ID.`;
+  const metaKeywords = [
+    vehicle.make,
+    modelName,
+    `${vehicle.make} ${modelName}`,
+    `${modelName} for sale`,
+    `${vehicle.make} ${modelName} for sale`,
+    vehicle.type,
+    vehicle.specs?.split('|').join(',') // specs like "4WD, Turbo, Diesel"
+  ].join(', ');
+
   return (
     <main className="p-8 max-w-4xl mx-auto">
       <Helmet>
-        <title>{vehicle.title} | Nippon Motors</title>
-        <meta
-          name="description"
-          content={`Explore our ${vehicle.title} — ${vehicle.specs}, ${vehicle.mileage}, ${vehicle.price}. Imported and available from Nippon Motors.`}
-        />
-        <meta
-          name="keywords"
-          content="Toyota Grand Hiace, Grand Hiace, Toyota Grand Hiace for sale, Grand Hiace for sale, VCH16W, KCH16W, VCH16, KCH16"
-        />
-        <link
-          rel="canonical"
-          href={`https://nipponmotors.org/inventory/${vehicle.id}`}
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={metaKeywords} />
+        <link rel="canonical" href={`https://nipponmotors.org/inventory/${vehicle.id}`} />
       </Helmet>
 
       <Link to="/inventory" className="text-blue-500 underline mb-4 inline-block">← Back to Inventory</Link>
@@ -52,5 +60,4 @@ export default function VehicleDetail() {
       </div>
     </main>
   );
-
 }
